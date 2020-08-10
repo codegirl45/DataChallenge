@@ -1,0 +1,22 @@
+library(readxl)
+library(car)
+library(dplyr)
+library(corrplot)
+
+# There are 32 variables including response.
+traindata <- read_excel("Desktop/WellsFargoChallenge/traindata.xlsx")
+View(traindata)
+
+
+str(traindata)
+
+model1 <- glm(y ~ ., data = traindata)
+vif(model1)
+
+
+dat.num <- na.omit(traindata[, which(sapply(traindata, is.numeric))])
+
+m <- cor(dat.num)
+m[0:30, 0:30]
+
+
