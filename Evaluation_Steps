@@ -1,0 +1,2 @@
+1. Perform initial data explaratory analysis. Drew the correlation matrix to see if there is correlation among variables. There does not seems to be any. All the NA values were omitted.
+2. Also created model1 and ran a vif. From there also there does not seems to be any correlation among variables.
